@@ -110,7 +110,10 @@ Then hit the url as given below and review the output.
 http://groc-example.com/images/?name=nasa.jpeg&width=340&height=400
 ```
 
-You are always welcome to drop me a note if you have questions.
+You are always welcome to drop me a note if you have questions through Issues section.
+
+<b>Issues</b>
+Please report issues using the Issues link.
 
 
 
