@@ -1,12 +1,14 @@
 <b>Dynamic Image processor</b>
 
 <b>Purpose</b>
-Given a Image filename with screensize, bandwidth the program generates an optimal image output. 
+
+Given a Image filename with screensize, bandwidth the program generates an optimal image output on the fly and responds back as content-type:image/jpeg.
 The image output can be:
 a. The output of resized image as Bytes based on bandwidth of network, size requested and screensize
 b. The entire image as bytes for a given url passed with content-type as image/jpeg
 
-Primary intent of this program is to embed this and make it imageserver to generate or ouput image files dynamically. It provides capability to resize image when WXH is passed in querystring with option to forcefit the size and return or return the best fit option with no aspect ratio loss.
+Primary intent of this program is to embed this and make it imageserver which generates ouput image files dynamically. It provides capability to resize image when WXH is passed in querystring with option to forcefit the size and return or return the best fit option with no aspect ratio loss.
+
 If you dont want to resize but just optimize for a given screensize of rendering with bandwidth in 2g, 3g etc - it optimizes image quality using Pillow-SIMD and returns the output.
 
 <b>DEPENDENCY </b>
@@ -31,6 +33,7 @@ LoadFile "/Users/vph/anaconda/lib/libpython3.6m.dylib"
 LoadModule wsgi_module "/Users/vph/anaconda/lib/python3.6/site-packages/mod_wsgi-4.5.16-py3.6-macosx-10.7-x86_64.egg/mod_wsgi/server/mod_wsgi-py36.cpython-36m-darwin.so"
 WSGIPythonHome "/Users/vph/anaconda"
 ```
+
 Note the order in which the above is to be copied. Copy Loadmodule in httpd.conf in the same section as LoadModule seen. Copy the WSGIPythonHome below or after ServerName section in httpd.conf
 
 Copy the files from this project into a folder e.g. /var/www/imgprocessor. It is important that you execute a command to create default log file in case you dont have root or sudo access. Hence execute the following touch commands to generate default log files
