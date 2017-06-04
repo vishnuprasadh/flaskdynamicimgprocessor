@@ -97,7 +97,10 @@ WSGIDaemonProcess has more options like processes and threads etc. Very importan
 This is optional. Outside of the log files of application, we also got the apache common log and errorlog configured as given above which you can change as required.
 
 <b>Step : 7 </b>. 
-Post the above run the command to provide access/ownership to the running process in the /var/www/imgprocessor/
+Post the above run the command to provide access/ownership to the running process in the /var/www/imgprocessor/.
+Check that the "vph" user given below is also the same user used in apache WSGIDaemonProcess user. I have given here 755 for the entire folder. Ensure your username for the running process is in sync with the name here.
+
+It is a bad practice to have root user here, so ensure we use a valid user.
 
 ```bash
 cd /var/www/imgprocessor
