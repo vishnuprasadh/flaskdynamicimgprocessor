@@ -138,3 +138,52 @@ Issue in generating image for nasa1.jpeg - exceptiontrace:File nasa1.jpeg doesnt
 Generate image for name:404img.jpeg,ssize:320,bwidth:2g,w:0,h:0,force:False
 Issue in generating image for 404img.jpeg - exceptiontrace:File 404img.jpeg doesnt exist. Exception - File not found
 500 error rendered because  not found
+Generate image for name:nasa.jpeg,ssize:320,bwidth:2g,w:0,h:0,force:False
+Generated image for nasa.jpeg_320_2g
+Generate image for name:nasa.jpeg,ssize:320,bwidth:2g,w:600,h:0,force:False
+Generated image for nasa.jpeg_600x0_2g
+Generate image for name:nasa.jpeg,ssize:320,bwidth:2g,w:1200,h:0,force:False
+Generated image for nasa.jpeg_1200x0_2g
+Generate image for name:nasa.jpeg,ssize:320,bwidth:2g,w:500,h:400,force:False
+Generated image for nasa.jpeg_500x400_2g
+Generate image for name:nasa.jpeg,ssize:320,bwidth:2g,w:500,h:700,force:False
+Generated image for nasa.jpeg_500x700_2g
+Generate image for name:nasa.jpeg,ssize:320,bwidth:2g,w:600,h:700,force:False
+Generated image for nasa.jpeg_600x700_2g
+Generate image for name:nasa.jpeg,ssize:320,bwidth:2g,w:600,h:700,force:False
+Generated image for nasa.jpeg_600x700_2g
+Generate image for name:nasa.jpeg,ssize:320,bwidth:4g,w:600,h:700,force:False
+Generated image for nasa.jpeg_600x700_4g
+Generate image for name:nasa.jpeg,ssize:720,bwidth:4g,w:600,h:700,force:False
+Generated image for nasa.jpeg_600x700_4g
+Generate image for name:nasa.jpeg,ssize:720,bwidth:2g,w:600,h:700,force:False
+Generated image for nasa.jpeg_600x700_2g
+Generate image for name:nasa.jpeg,ssize:1200,bwidth:2g,w:600,h:700,force:False
+Generated image for nasa.jpeg_600x700_2g
+Generate image for name:nasa.jpeg,ssize:1200,bwidth:3g,w:600,h:700,force:False
+Generated image for nasa.jpeg_600x700_3g
+Generate image for name:nasa.jpeg,ssize:1200,bwidth:4g,w:600,h:700,force:False
+Generated image for nasa.jpeg_600x700_4g
+Generate image for name:nasa1.jpeg,ssize:1200,bwidth:4g,w:600,h:700,force:False
+Issue in generating image for nasa1.jpeg - exceptiontrace:File nasa1.jpeg doesnt exist. Exception - File not found
+500 error rendered because  not found
+Generate image for name:nasa1.jpeg,ssize:1200,bwidth:4g,w:600,h:700,force:False
+Issue in generating image for nasa1.jpeg - exceptiontrace:File nasa1.jpeg doesnt exist. Exception - File not found
+500 error rendered because  not found
+Generate image for name:nassa1.jpeg,ssize:1200,bwidth:4g,w:600,h:700,force:False
+Issue in generating image for nassa1.jpeg - exceptiontrace:File nassa1.jpeg doesnt exist. Exception - File not found
+500 error rendered because  not found
+Generate image for name:asdsd.jpeg,ssize:1200,bwidth:4g,w:600,h:700,force:False
+Issue in generating image for asdsd.jpeg - exceptiontrace:File asdsd.jpeg doesnt exist. Exception - File not found
+500 error rendered because  not found
+Generate image for name:nasa.jpeg,ssize:1200,bwidth:4g,w:600,h:700,force:False
+Generated image for nasa.jpeg_600x700_4g
+Generate image for name:nasa1.jpeg,ssize:1200,bwidth:4g,w:600,h:700,force:False
+Issue in generating image for nasa1.jpeg - exceptiontrace:File nasa1.jpeg doesnt exist. Exception - File not found
+500 error rendered because  not found
+Generate image for name:nasa1.jpeg,ssize:1200,bwidth:4g,w:600,h:700,force:False
+Issue in generating image for nasa1.jpeg - exceptiontrace:File nasa1.jpeg doesnt exist. Exception - File not found
+500 error rendered because  not found
+Generate image for name:nasa1.jpeg,ssize:1200,bwidth:4g,w:600,h:700,force:False
+Issue in generating image for nasa1.jpeg - exceptiontrace:File nasa1.jpeg doesnt exist. Exception - File not found
+500 error rendered because  not found
