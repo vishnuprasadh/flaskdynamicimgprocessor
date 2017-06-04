@@ -42,42 +42,45 @@ def respond_image():
     if width & height with HTTP_NW_TYPE is given then the same would be considered for image optimization in terms of size.
     if none are given HTTP_SCREENSIZE is assumed to be 1080, HTTP_NW_TYPE = *
     '''
+    try:
 
-    #Resolve Imagename, height,width & fsize in querystring
-    if len(request.args) >0:
-        filename = request.args.get("name")
-        if not (request.args.get("width") == "NoneType"):
-            try:
-                width = int(request.args.get("width"))
-            except:
-                width = 0
-        if not (request.args.get("height") == "NoneType"):
-            try:
-                height = int(request.args.get("height"))
-            except:
-                height = 0
-        if not (request.args.get("fsize") == "NoneType"):
-            try:
-                forcesize = request.args.get("fsize")
-                #if input value is other than 0 or 1, set forcesize as 0 i.e.false
-                if not (forcesize == "1"):
+        #Resolve Imagename, height,width & fsize in querystring
+        if len(request.args) >0:
+            filename = request.args.get("name")
+            if not (request.args.get("width") == "NoneType"):
+                try:
+                    width = int(request.args.get("width"))
+                except:
+                    width = 0
+            if not (request.args.get("height") == "NoneType"):
+                try:
+                    height = int(request.args.get("height"))
+                except:
+                    height = 0
+            if not (request.args.get("fsize") == "NoneType"):
+                try:
+                    forcesize = request.args.get("fsize")
+                    #if input value is other than 0 or 1, set forcesize as 0 i.e.false
+                    if not (forcesize == "1"):
+                        forcesize = False
+                    else:
+                        forcesize = True
+                except Exception as ex:
+                    mylogger.error(ex)
                     forcesize = False
-                else:
-                    forcesize = True
-            except Exception as ex:
-                mylogger.error(ex)
-                forcesize = False
-              
-    #Resolve all header info which has screensize & bandwidth
-    if request.headers.get("HTTP_NW_TYPE") == 'NoneType':
-        bwidth = "2g"
-    else:
-        bwidth = str(request.headers.get("HTTP_NW_TYPE"))
 
-    if request.headers.get("HTTP_SCREENSIZE") == 'NoneType':
-        screensize = "320"
-    else:
-        screensize = str(request.headers.get("HTTP_SCREENSIZE"))
+        #Resolve all header info which has screensize & bandwidth
+        if request.headers.get("HTTP_NW_TYPE") == 'NoneType':
+            bwidth = "2g"
+        else:
+            bwidth = str(request.headers.get("HTTP_NW_TYPE"))
+
+        if request.headers.get("HTTP_SCREENSIZE") == 'NoneType':
+            screensize = "320"
+        else:
+            screensize = str(request.headers.get("HTTP_SCREENSIZE"))
+    except Exception as ex:
+        mylogger.error("Error while parsing input keys for {} - Exception : {}".format(filename, ex))
 
     #Now get the image based on resolved values from the request
     responseimage = generate_image(filename,width,height,forcesize,bwidth,screensize)
