@@ -11,7 +11,7 @@ from imagehandler import imagehandler
 app = Flask(__name__)
 
 mylogger = logging.getLogger("dynamicimgprocessor")
-mylogger.addHandler(logging.handlers.RotatingFileHandler("dynamicimgprocessor.log",'a',100000,5))
+mylogger.addHandler(logging.handlers.RotatingFileHandler("/var/www/imgprocessor/dynamicimgprocessor.log",'a',100000,5))
 mylogger.setLevel("INFO")
 
 #Key variables which will be used for generating the image.
@@ -22,7 +22,7 @@ forcesize=0
 width=0
 height =0
 
-@app.route("/images/")
+@app.route("/")
 def respond_image():
     '''
     This application is standalone server which internally calls the class:imghandler that outputs the byte of image without local storage.

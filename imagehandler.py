@@ -47,7 +47,7 @@ class imagehandler(object):
 
     '''Initialize the logger to log information'''
     mylogger = logging.getLogger('Imagehandler')
-    handler = logging.handlers.RotatingFileHandler('imghandler.log','a',maxBytes=10000000,backupCount=5)
+    handler = logging.handlers.RotatingFileHandler('/var/www/imgprocessor/imghandler.log','a',maxBytes=10000000,backupCount=5)
     mylogger.addHandler(handler)
     mylogger.setLevel("ERROR")
 
