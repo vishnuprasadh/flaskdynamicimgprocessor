@@ -4,6 +4,7 @@
 
 Given a Image filename with screensize, bandwidth the program generates an optimal image output on the fly and responds back as content-type:image/jpeg.
 The image output can be:
+
 a. The output of resized image as Bytes based on bandwidth of network, size requested and screensize
 
 b. The entire image as bytes for a given url passed with content-type as image/jpeg
