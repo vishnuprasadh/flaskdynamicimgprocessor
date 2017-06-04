@@ -11,6 +11,16 @@ Primary intent of this program is to embed this and make it imageserver which ge
 
 If you dont want to resize but just optimize for a given screensize of rendering with bandwidth in 2g, 3g etc - it optimizes image quality using Pillow-SIMD and returns the output.
 
+<b>Features & Advantages</b>
+
+1. Width, height and bandwidth based optimized image outputs.
+2. Only bandwidth,screensize input can also provide an optimal image which is also configurable.
+3. Ability to handle 500 and 404. E.g. there is already an inbuilt feature where a default 404image.png is used in case original image is not found. You can put any images like logos, spinner defaults to show in case image is not found.
+4. WSGIDaemonProcess embedded in Apache means that you can leverage the optimizations from Apache 2.4 here easily including zipping, compression etc.
+5. You can easily put a frontend nginx or varnish or other proxies which help you to cache them in varnish. There is a imagekey provided uniquely for every width/height or bandwidth/networktype used which you can use as a key, if required and reach out to backend on need basis.
+6. As this is a very lightweight protocol, you can leverage the webserver to fullscale and offload CPU intensive/IO intensive operations which otherwise would have been the responsibility of your appservers.
+
+
 <b>DEPENDENCY & SETUP STEPS</b>
 
 <b>Step : 1</b>.
