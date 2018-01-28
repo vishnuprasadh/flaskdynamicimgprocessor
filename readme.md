@@ -130,8 +130,8 @@ You are always welcome to drop me a note if you have questions through Issues se
 <b>Issues</b>
 Please report issues using the Issues link.
 
-
-
+<b>License </b>. 
+You are free to use this but please ensure you provide the due credit to this repository for any fork or download of the code.
 
 
 
