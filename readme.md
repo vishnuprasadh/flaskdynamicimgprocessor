@@ -1,4 +1,5 @@
 <b>Dynamic Image processor</b>
+Note: You are free to use the code here, please check the License section for details.
 
 <b>Purpose</b>
 
